@@ -3,13 +3,12 @@ import Login from "./pages/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import PersistLogin from "./components/PersistLogin";
-import Sidebar from "./components/sidebar/Sidebar";
 import Product from "./pages/Product";
 import Purchase from "./pages/Purchase";
 import Sale from "./pages/Sale";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
-import { ThemeProvider, CssBaseline, Container } from "@mui/material";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./theme";
 
 function App() {

@@ -22,6 +22,7 @@ const Purchase = () => {
   useEffect(() => {
     fetchProducts();
     fetchOrders("buy");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOnChange = (e) => {
@@ -30,7 +31,7 @@ const Purchase = () => {
 
   const handleProductSelect = (e) => {
     const selectedProduct = products.filter(
-      (item) => item._id == e.target.value
+      (item) => item._id === e.target.value
     );
     setFormData((prev) => ({
       ...prev,

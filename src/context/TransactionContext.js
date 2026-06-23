@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext } from "react";
 import { authAxiosInstance } from "../utils/axiosConfig";
 import queryString from "query-string";
 
@@ -14,9 +14,9 @@ export const TransactionProvider = ({ children }) => {
     try {
       const string = queryString.stringify({ type });
       const resp = await authAxiosInstance.get(`/transactions?${string}`);
-      if (type == "buy") {
+      if (type === "buy") {
         setPurchasesOrders(resp.data.data);
-      } else if (type == "sell") {
+      } else if (type === "sell") {
         setSaleOrders(resp.data.data);
       } else {
         setTransaction(resp.data.data);

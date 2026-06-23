@@ -31,6 +31,7 @@ export const ProductProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await authAxiosInstance.post("products/add", formData);
+      void response;
       // setProducts([...products, response.data]);
       fetchProducts();
 

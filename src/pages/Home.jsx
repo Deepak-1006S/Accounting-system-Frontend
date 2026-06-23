@@ -55,6 +55,7 @@ const Home = () => {
   const { fetchOrders, transactions } = useTransaction();
   useEffect(() => {
     fetchOrders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const calculateBalance = (transactions) => {
